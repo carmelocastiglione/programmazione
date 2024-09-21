@@ -14,6 +14,8 @@ public class App {
         int num2 = Integer.valueOf(riga);
         int somma = calcolatrice.addizione(num1, num2);
         System.out.println("Somma: " + somma);
+        int massimo = calcolatrice.max(num1, num2);
+        System.out.println("Massimo: " + massimo);
 
     }
 }
