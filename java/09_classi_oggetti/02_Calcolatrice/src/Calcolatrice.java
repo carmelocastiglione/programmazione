@@ -14,4 +14,10 @@ public class Calcolatrice {
         }
     }
 
+    public void raddoppia(int[] v) {
+        for (int i = 0; i < v.length; i++) {
+            v[i] = v[i] * 2;
+        }
+    }
+
 }
