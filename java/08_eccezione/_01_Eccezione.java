@@ -8,6 +8,9 @@ public class _01_Eccezione {
             System.out.println(risultato);
         } catch (Exception e) {
             System.err.println("Divisione per zero");
+            return;
+        } finally {
+            System.out.println("Fine del programma");
         }
     }
 }

@@ -12,8 +12,7 @@ public class _02_InputStringhe {
             String name = tastiera.readLine();
             System.out.println(name);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.err.println("Errore lettura file");
         }
     }
 }
