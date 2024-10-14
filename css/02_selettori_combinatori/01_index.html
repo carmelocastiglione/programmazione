@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selettore universale */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* Selettore di tipo */
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+        /* Selettore di classe */
+        .button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+        }
+        /* Selettore ID */
+        #header {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        /* Selettore attributo */
+        input[type="text"] {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        /* Selettore di dipendenza */
+        ul li {
+            list-style-type: square;
+        }
+        /* Selettore figlio */
+        div > p {
+            color: #666;
+        }
+        /* Selettore fratello adiacente */
+        h1 + p {
+            margin-top: 0;
+        }
+        /* Selettore fratello generale */
+        h1 ~ p {
+            color: #777;
+        }
+        /* Selettore di gruppo */
+        h1, h2, h3 {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        /* Selettore pseudo classi */
+        a:hover {
+            color: #ff5722;
+        }
+
+        li:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        /* Selettore pseudo-elementi */
+        p::first-line {
+            font-weight: bold;
+        }
+
+        p::after {
+            content: " - Fine del paragrafo";
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
