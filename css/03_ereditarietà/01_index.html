@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            color: blue;
+        }
+        .override {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>Questo paragrafo eredita il colore del testo.</p>
+        <span>Questo span eredita anche il colore del testo.</span>
+    </div>
+
+    <div class="parent">
+        <p>Questo paragrafo eredita il colore del testo.</p>
+        <span class="override">Questo span ha un colore diverso.</span>
+    </div>
+</body>
+</html>
