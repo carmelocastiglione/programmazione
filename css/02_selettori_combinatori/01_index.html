@@ -31,19 +31,19 @@
             border: 1px solid #ccc;
             padding: 5px;
         }
-        /* Selettore di dipendenza */
+        /* Selettore di discendenza (seleziona tutti gli elementi interni) */
         ul li {
             list-style-type: square;
         }
-        /* Selettore figlio */
+        /* Selettore figlio (seleziona solo gli elementi interni di un livello*/
         div > p {
             color: #666;
         }
-        /* Selettore fratello adiacente */
+        /* Selettore fratello adiacente (seleziona l'elemento successivo sullo stesso livello) */
         h1 + p {
             margin-top: 0;
         }
-        /* Selettore fratello generale */
+        /* Selettore fratello generale (seleziona tutti gli elementi sullo stesso livello) */
         h1 ~ p {
             color: #777;
         }
