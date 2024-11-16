@@ -43,10 +43,10 @@ public class List {
     }
 
     public void print() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.getData());
-            temp = temp.getNext();
+        Node currentNode = head;
+        while (currentNode != null) {
+            System.out.println(currentNode.getData());
+            currentNode = currentNode.getNext();
         }
     }
 
