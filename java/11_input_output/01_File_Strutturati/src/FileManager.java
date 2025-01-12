@@ -10,13 +10,13 @@ public class FileManager {
 
     public void save(ArrayList<Persona> lista) {
         try {
-            FileOutputStream f = new FileOutputStream(filename);
-            ObjectOutputStream fOut = new ObjectOutputStream(f);
+            FileOutputStream fos = new FileOutputStream(filename);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
             for (Persona persona : lista) {
-                fOut.writeObject(persona);
+                oos.writeObject(persona);
             }
-            fOut.flush();
-            f.close();
+            oos.flush();
+            fos.close();
             System.out.println("Oggetto salvato con successo");
         } catch (Exception e) {
             System.err.println("Eccezione: " + e.getMessage());
@@ -26,19 +26,19 @@ public class FileManager {
     public void read() {
         Persona p;
         try {
-            FileInputStream f = new FileInputStream(filename);
-            ObjectInputStream fIn = new ObjectInputStream(f);
+            FileInputStream fis = new FileInputStream(filename);
+            ObjectInputStream ois = new ObjectInputStream(fis);
 
             while (true) {
                 try {
-                    p = (Persona) fIn.readObject();
+                    p = (Persona) ois.readObject();
                     System.out.println(p);
                 } catch (Exception e) {
                     // Se viene generata un'eccezione, non ci sono più dati da leggere
                     break;
                 }
             }
-            f.close();
+            fis.close();
         } catch (Exception e) {
             System.err.println("Impossibile aprire il file: " + e.getMessage());
         }
