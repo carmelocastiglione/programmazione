@@ -18,6 +18,7 @@ public class App {
         JLabel etichettaPrezzo = new JLabel("Inserisci il prezzo:");
         panel.add(etichettaPrezzo);
         JTextField prezzo = new JTextField("0.00€", 20);
+        prezzo.setHorizontalAlignment(JTextField.CENTER);
         panel.add(prezzo);
         JTextField commento = new JTextField("Questa casella di testo non è editabile");
         commento.setEditable(false);
