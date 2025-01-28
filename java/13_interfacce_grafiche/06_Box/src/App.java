@@ -1,4 +1,3 @@
-import java.awt.Checkbox;
 import java.awt.Container;
 
 import javax.swing.ButtonGroup;
