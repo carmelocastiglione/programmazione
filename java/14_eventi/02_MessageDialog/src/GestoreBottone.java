@@ -37,6 +37,13 @@ public class GestoreBottone implements ActionListener {
                     JOptionPane.INFORMATION_MESSAGE);   
             }
         }
+        if (action.equals("info")) {
+            JOptionPane.showMessageDialog(
+                container, 
+                "Questo programma permette di inserire nome e cognome", 
+                "Info",
+                JOptionPane.PLAIN_MESSAGE);
+        }
         if (action.equals("reset")) {
             campoCognome.setText("");
             campoNome.setText("");

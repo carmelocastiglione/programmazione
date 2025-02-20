@@ -46,8 +46,13 @@ public class App {
         button2.setActionCommand("reset");
         panelPulsanti.add(button2);
 
+        JButton button3 = new JButton("Info");
+        button3.setActionCommand("info");
+        panelPulsanti.add(button3);
+
         button1.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
         button2.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
+        button3.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
         
         container.add(panelDati, BorderLayout.CENTER);
         container.add(panelPulsanti, BorderLayout.PAGE_END);
