@@ -24,6 +24,7 @@ public class App {
          
         JButton button1 = new JButton("Superiore");
         button1.setActionCommand("btn1");
+        button1.setName("test");
         pane.add(button1, BorderLayout.PAGE_START);
 
         JTextArea textArea = new JTextArea(50, 10);
