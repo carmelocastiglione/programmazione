@@ -50,9 +50,19 @@ public class App {
         button3.setActionCommand("info");
         panelPulsanti.add(button3);
 
+        JButton button4 = new JButton("Inserisci testo");
+        button4.setActionCommand("insert");
+        panelPulsanti.add(button4);
+
+        JButton button5 = new JButton("Esci");
+        button5.setActionCommand("esci");
+        panelPulsanti.add(button5);
+
         button1.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
         button2.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
         button3.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
+        button4.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
+        button5.addActionListener(new GestoreBottone(container, campoCognome, campoNome));
         
         container.add(panelDati, BorderLayout.CENTER);
         container.add(panelPulsanti, BorderLayout.PAGE_END);

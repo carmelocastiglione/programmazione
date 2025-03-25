@@ -1,6 +1,8 @@
 import java.awt.Container;
+import java.awt.SplashScreen;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.random.RandomGenerator.SplittableGenerator;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -47,6 +49,18 @@ public class GestoreBottone implements ActionListener {
         if (action.equals("reset")) {
             campoCognome.setText("");
             campoNome.setText("");
+        }
+        if (action.equals("insert")) {
+            String data = JOptionPane.showInputDialog(container, "Inserisci cognome e nome", "Inserisci valori", JOptionPane.YES_NO_CANCEL_OPTION);
+            String[] splittedData = data.split(" ");
+            campoCognome.setText(splittedData[0]);
+            campoNome.setText(splittedData[1]);
+        }
+        if (action.equals("esci")) {
+            int response = JOptionPane.showConfirmDialog(container, "Vuoi uscire?", "Finestra di uscita", JOptionPane.YES_NO_OPTION);
+            if (response == JOptionPane.YES_OPTION) {
+                System.exit(0);
+            }
         }
     }
 
