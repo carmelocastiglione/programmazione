@@ -1,8 +1,6 @@
 import java.awt.Container;
-import java.awt.SplashScreen;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.random.RandomGenerator.SplittableGenerator;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
