@@ -1,7 +1,16 @@
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class GestoreFinestra implements WindowListener {
+
+    JFrame frame;
+
+    public GestoreFinestra(JFrame frame) {
+        this.frame = frame;
+    }
 
     @Override
     public void windowOpened(WindowEvent e) {
@@ -11,7 +20,10 @@ public class GestoreFinestra implements WindowListener {
     @Override
     public void windowClosing(WindowEvent e) {
         System.out.println("Window closing");
-        System.exit(0);
+        int uscita = JOptionPane.showConfirmDialog(frame, "Vuoi uscire?", "Escita", JOptionPane.YES_NO_OPTION);
+        if (uscita == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
     }
 
     @Override

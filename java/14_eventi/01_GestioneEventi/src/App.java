@@ -12,8 +12,8 @@ public class App {
 
     private static void createAndShowGUI() {
         JFrame frame = new JFrame("My App");
-        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.addWindowListener(new GestoreFinestra());
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new GestoreFinestra(frame));
         frame.setLayout(new BorderLayout());
         addComponentsToPane(frame.getContentPane());        
         frame.setSize(450, 300);
