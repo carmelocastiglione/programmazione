@@ -17,6 +17,10 @@ ultimo = lista[-1]
 print("Primo:", primo)
 print("Ultimo", ultimo)
 
+# Cambiare un elemento
+lista[1] = "mango"
+print(lista)
+
 # Sottoinsiemi di elementi
 sottoinsieme = lista[1:3]
 print("Sottoinsieme:", sottoinsieme)
@@ -34,6 +38,10 @@ print("Frutta:", lista)
 # Aggiungere elementi alla lista in una posizione
 lista.insert(2, "arancia")
 print("Frutta:", lista)
+
+# Aggiungere elementi multipli alla fine della lista
+lista.extend(["ananas", "cocco", "passionfruit"])  
+print("Frutta:", lista) 
 
 # Rimuovere un elemento specifico
 lista.remove("banana")
