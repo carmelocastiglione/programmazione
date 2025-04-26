@@ -7,7 +7,6 @@ import javax.swing.table.TableColumn;
 import javax.swing.table.TableModel;
 
 import java.awt.Dimension;
-import java.util.ArrayList;
 import java.awt.Container;
  
 public class App {
@@ -46,15 +45,8 @@ public class App {
                                 "# of Years",
                                 "Vegetarian"};
  
-        //JTable table = new JTable(data, columnNames);
-        ArrayList<Persona> list = new ArrayList<Persona>();
-        list.add(new Persona("Kathy", "Smith", "Snowboarding", 5, false));
-        list.add(new Persona("John", "Doe", "Rowing", 3, true));
-        list.add(new Persona("Sue", "Black", "Knitting", 2, false));
-        list.add(new Persona("Jane", "White", "Speed reading", 20, true));
-        list.add(new Persona("Joe", "Brown", "Pool", 10, false));
-    
-        JTable table = new JTable(new DataTableModel(list));
+        JTable table = new JTable(data, columnNames);
+        
         // Imposto la terza colonna come elenco a discesa
         TableColumn sportColumn = table.getColumnModel().getColumn(2);
         JComboBox<String> comboBox = new JComboBox<String>();

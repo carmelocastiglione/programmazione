@@ -4,22 +4,8 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 
 public class DataTableModel extends AbstractTableModel {
-
-    // Object[][] data = {
-    //     {"Kathy", "Smith", "Snowboarding", 5, false},
-    //     {"John", "Doe", "Rowing", 3, true},
-    //     {"Sue", "Black", "Knitting", 2, false},
-    //     {"Jane", "White", "Speed reading", 20, true},
-    //     {"Joe", "Brown", "Pool", 10, false}
-    // };
     
     ArrayList<Persona> data;
-
-    // String[] columnNames = {"First Name",
-    //                         "Last Name",
-    //                         "Sport",
-    //                         "# of Years",
-    //                         "Vegetarian"};
 
     String[] columnNames = {"Nome", "Cognome", "Hobby", "Anni", "Check"};
 

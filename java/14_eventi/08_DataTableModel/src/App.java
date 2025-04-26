@@ -31,22 +31,7 @@ public class App {
         
         public static void addComponentsToPane(Container c) {
         //panel.setOpaque(true); //content panes must be opaque
-
-        Object[][] data = {
-            {"Kathy", "Smith", "Snowboarding", 5, false},
-            {"John", "Doe", "Rowing", 3, true},
-            {"Sue", "Black", "Knitting", 2, false},
-            {"Jane", "White", "Speed reading", 20, true},
-            {"Joe", "Brown", "Pool", 10, false}
-        };
  
-        String[] columnNames = {"First Name",
-                                "Last Name",
-                                "Sport",
-                                "# of Years",
-                                "Vegetarian"};
- 
-        //JTable table = new JTable(data, columnNames);
         ArrayList<Persona> list = new ArrayList<Persona>();
         list.add(new Persona("Kathy", "Smith", "Snowboarding", 5, false));
         list.add(new Persona("John", "Doe", "Rowing", 3, true));
@@ -55,6 +40,7 @@ public class App {
         list.add(new Persona("Joe", "Brown", "Pool", 10, false));
     
         JTable table = new JTable(new DataTableModel(list));
+
         // Imposto la terza colonna come elenco a discesa
         TableColumn sportColumn = table.getColumnModel().getColumn(2);
         JComboBox<String> comboBox = new JComboBox<String>();
