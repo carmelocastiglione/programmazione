@@ -63,7 +63,7 @@ public class GestorePulsante implements ActionListener {
         promemoria.setImportante(importante);
         // ricarico l'albero
         DefaultTreeModel model = (DefaultTreeModel) treeMemo.getModel();
-        model.reload();
+        model.reload(); 
     }
 
     private void aggiungiPromemoria(Promemoria promemoria) {
