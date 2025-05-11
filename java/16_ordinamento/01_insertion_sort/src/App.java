@@ -24,7 +24,6 @@ public class App {
     }
 
     private static void insertionSort(ArrayList<Numero> list) {
-        //Numero key;
         // inizio dal secondo elemento perché assumiamo che il primo sia già ordinato
         // e lo confronto con gli elementi precedenti
         for (int i = 1; i < list.size(); i++) {
