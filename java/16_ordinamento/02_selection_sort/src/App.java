@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         ArrayList<Numero> list = generateArray(10);
         printArray(list);
-        insertionSort(list);
+        selectionSort(list);
         printArray(list);
     }
 
@@ -23,7 +23,7 @@ public class App {
         }
     }
 
-    private static void insertionSort(ArrayList<Numero> list) {
+    private static void selectionSort(ArrayList<Numero> list) {
         for (int i = 0; i < list.size() - 1; i++) {
             // Cerco il minimo nel vettore 
             int min_index = i;
