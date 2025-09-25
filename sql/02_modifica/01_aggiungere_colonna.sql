@@ -1,0 +1,2 @@
+ALTER TABLE squadre
+ADD nazione VARCHAR(50) NOT NULL;
