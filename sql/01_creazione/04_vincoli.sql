@@ -12,6 +12,7 @@ CREATE TABLE giocatori (
     goal INT CHECK (goal >= 0),
     peso FLOAT,
     attivo BOOLEAN NOT NULL DEFAULT TRUE,
+    ruolo ENUM('Portiere', 'Difensore', 'Centrocampista', 'Attaccante'),
     data_nascita DATE,
     ora_ultima_partita TIME,
     data_ora_ultima_partita DATETIME,
@@ -29,4 +30,5 @@ CHECK: Ensures that all values in a column satisfy a specific condition
 DEFAULT: Sets a default value for a column when no value is specified
 FOREIGN KEY: Ensures referential integrity by linking to a primary key in another table
 AUTO_INCREMENT: Automatically generates a unique number for new rows (specific to certain SQL databases)
+ENUM: A string object that can have only one value, chosen from a list of allowed values
 */
