@@ -1,7 +1,7 @@
 -- Selezionare tutte le informazioni complete su Case e Auto
 SELECT *
 FROM Auto
-INNER JOIN Auto ON Auto.marca = Casa.nome;
+INNER JOIN Casa ON Auto.marca = Casa.nome;
 
 -- In alternativa, utilizzando la sintassi implicita di join
 SELECT *
