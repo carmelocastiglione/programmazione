@@ -1,0 +1,29 @@
+p {
+    color: red;
+    font-family: Verdana;
+    text-align: justify;
+    line-height: 2;
+}
+  
+.job-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: green;
+}
+
+a:hover {
+    color: yellow;
+}
+
+h3 {
+    color: blue;
+}
+  
