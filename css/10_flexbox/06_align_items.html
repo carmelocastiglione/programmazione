@@ -1,0 +1,62 @@
+
+HomeCSSCSS FlexboxFlex ContainerTryit: align-items: center 
+Result Size: 741 x 618
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* 
+    align-items values:
+        stretch (default)
+        center
+        flex-start
+        flex-end
+        baseline
+    */
+.container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>align-items: center</h1>
+
+<p>align-items: center; aligns the flex items in the middle of the container:</p>
+
+<h1>align-items: flex-start</h1>
+
+<p>align-items: flex-start; aligns the flex items at the top of the container:</p>
+
+<h1>align-items: flex-end</h1>
+
+<p>align-items: flex-end; aligns the flex items at the bottom of the container:</p>
+
+<h1>align-items: stretch</h1>
+
+<p>align-items: stretch; stretches the flex items to fill the container (this is default):</p>
+
+<h1>align-items: baseline</h1>
+
+<p>align-items: baseline; aligns the flex items along their text baselines:</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html>

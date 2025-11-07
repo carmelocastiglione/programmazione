@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* 
+    align-content values:
+        stretch (default)
+        center
+        flex-start
+        flex-end
+        space-between
+        space-around
+    */
+.container {
+  display: flex;
+  height: 400px;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>align-content: center</h1>
+
+<p>align-content: center; - The flex lines are packed toward the center of the container:</p>
+
+<h1>align-content: flex-start</h1>
+<p>align-content: flex-start; - The flex lines are packed toward the start of the container:</p>
+
+<h1>align-content: flex-end</h1>
+<p>align-content: flex-end; - The flex lines are packed toward the end of the container:</p>
+
+<h1>align-content: space-around</h1>
+<p>align-content: space-around; - The flex lines are evenly distributed in the container with equal space around them:</p>
+
+<h1>align-content: space-between</h1>
+<p>align-content: space-between; - The flex lines are evenly distributed in the container with the first line at the start and the last line at the end:</p>
+
+<h1>align-content: stretch</h1>
+<p>align-content: stretch; - The flex lines stretch to take up the remaining space (this is default):</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+</div>
+
+</body>
+</html>
+
+

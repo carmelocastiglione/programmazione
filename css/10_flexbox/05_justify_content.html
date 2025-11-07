@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* 
+    justify-content values:
+        flex-start (default)
+        flex-end
+        center
+        space-between
+        space-around
+        space-evenly
+    */
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>justify-content: center</h1>
+
+<p>justify-content: center; aligns the flex items in the center of the container:</p>
+
+<h1>justify-content: flex-start</h1>
+
+<p>justify-content: flex-start; aligns the flex items at the beginning of the container (this is default):</p>
+
+<h1>justify-content: flex-end</h1>
+
+<p>justify-content: flex-end; aligns the flex items at the end of the container:</p>
+
+<h1>justify-content: space-around</h1>
+
+<p>justify-content: space-around; displays the flex items with space before, between, and after them:</p>
+
+<h1>justify-content: space-between</h1>
+
+<p>justify-content: space-between; displays the flex items with space between them:</p>
+
+<h1>justify-content: space-evenly</h1>
+
+<p>justify-content: space-evenly; displays the flex items with equal space around them:</p>
+
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html>
+
+

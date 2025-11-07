@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box model, margin, padding</title>
+  <style>
+    /* Resetto il CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      /* Dimensioni basate sui bordi */
+      box-sizing: border-box;
+    }
+    .box {
+      background-color: #f4f4f4;
+      border: 2px #777 solid;
+      /* Larghezza */
+      width: 500px;
+
+      /* Padding su tutti i lati */
+      padding: 20px;
+
+      /* Singoli padding */
+      /* 
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-bottom: 20px;
+      padding-right: 10px; 
+      */
+
+      /* Scorciatoia: top, right, bottom, left */
+      /* 
+      padding: 20px 10px 20px 10px;
+      */
+
+      /* Scorciatoia: top/bottom, right/left */
+      /* 
+      padding: 20px 10px;
+      */
+
+
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Box Uno</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis accusantium totam est saepe placeat sint culpa aliquid vel ipsum, ratione necessitatibus cumque, deserunt consequatur ducimus unde ex! Harum, ab maiores!</p>
+  </div>
+  <div class="box">
+    <h3>Box Due</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis accusantium totam est saepe placeat sint culpa aliquid vel ipsum, ratione necessitatibus cumque, deserunt consequatur ducimus unde ex! Harum, ab maiores!</p>
+  </div>
+</body>
+</html>

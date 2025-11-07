@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 
+    flex-direction:
+      row (default)
+      column
+      row-reverse
+      column-reverse
+  */
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>flex-direction: row</h1>
+
+<p>flex-direction: row; displays the flex items horizontally (from left to right):</p>
+
+<h1>flex-direction: column</h1>
+
+<p>flex-direction: column; displays the flex items vertically (from top to bottom):</p>
+
+<h1>flex-direction: row-reverse</h1>
+
+<p>flex-direction: row-reverse; displays the flex items horizontally (but from right to left):</p>
+
+<h1>flex-direction: column-reverse</h1>
+
+<p>flex-direction: column-reverse; displays the flex items vertically (but from bottom to top):</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html>
+
+

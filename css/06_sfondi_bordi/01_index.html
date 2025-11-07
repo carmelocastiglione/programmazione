@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sfondi e bordi</title>
+</head>
+<style>
+  #box-1 {
+    background-color: blanchedalmond;
+    /* border ha bisogno di: */ 
+    border-color: red;
+    border-style: solid;
+    border: 3px solid red;
+    border-radius: 10px;
+  }
+  #box-2 {
+    background: #ccc;
+    color: #fff;
+    border-top: 2px solid blue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #box-3 {
+    background-image: url('https://starecat.com/content/wp-content/uploads/smiling-cat.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 680px;
+    width: 700px;
+    color: #fff;
+  }
+  /* se l'immagine è troppo grande */
+  #box-4 {
+    /* background-image: url('https://i.kym-cdn.com/entries/icons/original/000/026/638/cat.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; */
+    background: url('https://i.kym-cdn.com/entries/icons/original/000/026/638/cat.jpg') no-repeat center center/cover;
+    height: 680px;
+    width: 700px;
+  }
+</style>
+<body>
+  <div id="box-1">
+    <h3>Box 1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti sed corporis alias velit iste nobis ab fugiat voluptatibus officia ipsum sit quas non soluta labore ratione dolor, at et?</p>
+  </div>
+  <div id="box-2">
+    <h3>Box 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti sed corporis alias velit iste nobis ab fugiat voluptatibus officia ipsum sit quas non soluta labore ratione dolor, at et?</p>
+  </div>
+  <div id="box-3">
+    <h3>Box 3</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti sed corporis alias velit iste nobis ab fugiat voluptatibus officia ipsum sit quas non soluta labore ratione dolor, at et?</p>
+  </div>
+  <div id="box-4">
+    <h3>Box 4</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque corrupti sed corporis alias velit iste nobis ab fugiat voluptatibus officia ipsum sit quas non soluta labore ratione dolor, at et?</p>
+  </div>
+</body>
+</html>
