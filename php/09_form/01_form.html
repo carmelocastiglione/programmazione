@@ -7,16 +7,45 @@
 </head>
 <body>
     <h2>Metodo GET</h2>
-    <form action="01_form.php" method="get">
+    <form action="01_form.php" method="GET">
         Nome: <input type="text" name="nome">
         Cognome: <input type="text" name="cognome">
         <input type="submit" value="Invia">
     </form>
 
     <h2>Metodo POST</h2>
-    <form action="01_form.php" method="post">
-        Nome: <input type="text" name="nome">
-        Cognome: <input type="text" name="cognome">
+    <form action="01_form.php" method="POST">
+        Nome: <input type="text" name="nome" id="nome">
+        Cognome: <input type="text" name="cognome" id="cognome">
+        <input type="submit" value="Invia">
+    </form>
+
+    <h2>Checkbox</h2>
+    <form action="01_form.php" method="POST">
+        Seleziona i tuoi hobby:<br>
+        <input type="checkbox" name="hobby[]" value="lettura"> Lettura<br>
+        <input type="checkbox" name="hobby[]" value="sport"> Sport<br>
+        <input type="checkbox" name="hobby[]" value="musica"> Musica<br>
+        <input type="submit" value="Invia">
+    </form>
+
+    <h2>Radiobutton</h2>
+    <form action="01_form.php" method="POST">
+        Scegli il tuo genere preferito:<br>
+        <input type="radio" name="genere" value="rock"> Rock<br>
+        <input type="radio" name="genere" value="pop"> Pop<br>
+        <input type="radio" name="genere" value="jazz"> Jazz<br>
+        <input type="submit" value="Invia">
+    </form>
+
+    <h2>List</h2>
+    <form action="01_form.php" method="POST">
+        Scegli la tua nazione:<br>
+        <select name="nazione">
+            <option value="italia">Italia</option>
+            <option value="francia">Francia</option>
+            <option value="germania">Germania</option>
+        </select>
         <input type="submit" value="Invia">
     </form>
 </body>
