@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  background-color: dodgerblue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  color:#000;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+/* The default is 0 1 auto */
+/* shorthand for flex-grow, flex-shrink, and flex-basis */
+.grande {
+    flex: 2 1 auto;
+}
+.piccolo {
+    flex: 1 1 auto;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex Property</h1>
+<p>Make the forth flex item grow twice as fast as the other flex items, and set its initial size to 50% of the container:</p>
+<div class="container">
+  <div class="piccolo">1</div>
+  <div class="piccolo">2</div>
+  <div class="piccolo">3</div>
+  <div class="grande">4</div>
+</div>
+
+</body>
+</html>
+
+

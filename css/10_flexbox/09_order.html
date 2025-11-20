@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  background-color: dodgerblue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  color:#000;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#primo {
+  order: 1;
+}
+#secondo {
+  order: 2;
+}
+#terzo {
+  order: 3;
+}
+#quarto {
+  order: 4;
+}
+</style>
+</head>
+<body>
+
+<h1>The order Property</h1>
+
+<p>Use the order property to specify the display order of the flex items inside the flex container:</p>
+
+<div class="container">
+  <div id="terzo">1</div>
+  <div id="secondo">2</div>
+  <div id="quarto">3</div> 
+  <div id="primo">4</div>
+</div>
+
+</body>
+</html>
+
+

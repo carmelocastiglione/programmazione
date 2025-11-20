@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  background-color: dodgerblue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  color:#000;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.piccolo {
+  flex-grow: 1;
+
+}
+.grande {
+  flex-grow: 4;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex-grow Property</h1>
+
+<p>Make the third flex item grow four times faster than the other flex items:</p>
+
+<div class="container">
+  <div class="piccolo">1</div>
+  <div class="piccolo">2</div>
+  <div class="grande">3</div>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  background-color: dodgerblue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  color:#000;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.larghezza-iniziale {
+  flex-basis: 30%;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex-basis Property</h1>
+
+<p>Set the initial length of the third flex item to 250 pixels:</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div class="larghezza-iniziale">3</div>
+  <div>4</div>
+</div>
+
+</body>
+</html>
+
+
