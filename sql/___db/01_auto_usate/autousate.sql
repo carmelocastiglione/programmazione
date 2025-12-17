@@ -9,7 +9,7 @@ CREATE TABLE Casa (
 );
 
 CREATE TABLE Proprietario (
-    Codice      INT NOT NULL PRIMARY KEY,
+    Codice      INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     Cognome     VARCHAR(20) NOT NULL,
     Nome        VARCHAR(20) NOT NULL,
     Indirizzo   VARCHAR(50) DEFAULT NULL,
