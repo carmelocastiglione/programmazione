@@ -10,6 +10,10 @@ CREATE TABLE table_name (
     column2 datatype,
     column3 datatype,
     ....
+    [ PRIMARY KEY (column) ]
+    [ FOREIGN KEY (column) REFERENCES table_name(column)] 
+    [ ON DELETE RESTRICT | CASCADE | SET NULL | NO ACTION | SET DEFAULT ]
+    [ ON UPDATE RESTRICT | CASCADE | SET NULL | NO ACTION | SET DEFAULT ]
 );
 DROP TABLE IF EXISTS table_name;
 CREATE [UNIQUE] INDEX index_name ON table_name(column);
