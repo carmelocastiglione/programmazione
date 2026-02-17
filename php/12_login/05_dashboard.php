@@ -1,4 +1,5 @@
 <?php
+session_start();
 $driver = "mysql";
 $host = "lamp-mysql"; 
 $user = "root";

@@ -28,7 +28,8 @@ if (isset($_COOKIE['session_token'])) {
         exit();
     }
 } else {
-    echo "Nessuna sessione attiva trovata.<br />\n";
+    header("Location: 02_login_form.php");
+    exit();
 }
 $conn = null;
 ?>
