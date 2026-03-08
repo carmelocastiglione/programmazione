@@ -20,3 +20,22 @@ AND A.Prezzo = (
     SELECT MAX(Prezzo) FROM Auto
     WHERE Alimentazione = 'GPL'
     )
+
+-- Visualizzare per ogni marca di auto, la percentuale di auto vendute
+SELECT Marca, ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Auto), 2) AS Percentuale
+FROM Auto
+GROUP BY Marca
+ORDER BY Percentuale DESC
+
+-- Visualizzare per ogni marca di auto, la percentuale di auto vendute con alimentazione elettrica
+SELECT Marca, ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Auto), 2) AS Percentuale
+FROM Auto
+WHERE Alimentazione = 'Elettrica'
+GROUP BY Marca
+ORDER BY Percentuale DESC
+
+-- Visualizzare per ogni auto lo scostamento tra il prezzo e il prezzo medio delle auto della stessa marca
+SELECT Marca, Modello, Prezzo, 
+       ROUND(Prezzo - (SELECT AVG(Prezzo) FROM Auto AS A2 WHERE A2.Marca = A1.Marca), 2) AS Scostamento
+FROM Auto AS A1
+ORDER BY Scostamento DESC
