@@ -1,3 +1,9 @@
+/* Bubble sort 
+ La bubble sort è un algoritmo di ordinamento semplice che confronta elementi adiacenti e li scambia se non sono nell'ordine corretto. Questo processo viene ripetuto fino a quando l'array è ordinato.
+ La complessità temporale è O(n^2) nel caso peggiore, ma è efficiente per piccoli insiemi di dati o quasi ordinati.
+ E' uno degli algoritmi di ordinamento più semplici da implementare, ma non è adatto per grandi insiemi di dati a causa della sua inefficienza (è il secondo peggior algoritmo di ordinamento tra quelli più comuni, dopo la selection sort).
+*/
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

@@ -1,3 +1,7 @@
+/* Insertion sort 
+ L'insertion sort è un algoritmo di ordinamento semplice che costruisce l'array ordinato uno alla volta, prendendo ogni elemento e inserendolo nella posizione corretta rispetto agli elementi già ordinati.
+ La complessità temporale è O(n^2) nel caso peggiore, ma è efficiente per piccoli insiemi di dati o quasi ordinati, o quando si proccessano dati quando arrivano in tempo reale (ad esempio, quando si ricevono dati uno alla volta e si desidera mantenerli ordinati).
+*/
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -53,13 +57,13 @@ void insertionSort(int array[], int size, int mode) {
     // Confronta key con ogni elemento alla sua sinistra finche'  non si trova 
     // un elemento piu'  piccolo o uguale
     if (mode == SORT_ASC) {
-      while (key < array[j] && j >= 0) {
+      while (j >= 0 && key < array[j]) {
         array[j + 1] = array[j];
         j--;
      }
     array[j + 1] = key;
     } else if (mode == SORT_DES) {
-      while (key > array[j] && j >= 0) {
+      while (j >= 0 && key > array[j]) {
         array[j + 1] = array[j];
         j--;
         }

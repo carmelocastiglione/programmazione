@@ -1,3 +1,8 @@
+/* Selection sort 
+ La selection sort è un algoritmo di ordinamento semplice che divide l'array in due parti: una parte ordinata e una parte non ordinata. Ad ogni passo, trova l'elemento minimo (o massimo) nella parte non ordinata e lo sposta nella parte ordinata.
+ La complessità temporale è O(n^2) nel caso peggiore, ma è efficiente per piccoli insiemi di dati.
+ E' il più semplice da implementare, ma non è adatto per grandi insiemi di dati a causa della sua inefficienza (è il peggior algoritmo di ordinamento tra quelli più comuni).
+*/
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
