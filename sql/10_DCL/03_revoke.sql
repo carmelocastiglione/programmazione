@@ -1,0 +1,1 @@
+REVOKE ALL PRIVILEGES ON *.* FROM 'utentetest';
