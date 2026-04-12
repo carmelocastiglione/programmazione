@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS giocatori;
+CREATE DATABASE giocatori;
+USE giocatori;
+
 -- Cancello le tabelle se esistono
 DROP TABLE IF EXISTS giocatori;
 DROP TABLE IF EXISTS squadre;
@@ -25,7 +29,3 @@ CREATE TABLE giocatori (
     id_squadra INT,
     FOREIGN KEY (id_squadra) REFERENCES squadre(id)
 );
-
--- Creo gli indici
-CREATE UNIQUE INDEX idx_sigla_squadra ON squadre(sigla_squadra);
-CREATE INDEX idx_cognome ON giocatori(cognome);
