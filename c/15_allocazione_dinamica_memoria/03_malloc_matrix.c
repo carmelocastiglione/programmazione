@@ -18,6 +18,11 @@ int main() {
     // Per ogni riga, alloco una colonna composta da interi
     for (int i = 0; i < row; i++) {
         pMatrix[i] = (int *) malloc(col*sizeof(int));
+        // Equivale a scrivere pMatrix+i = (int *) malloc(col*sizeof(int));
+        if (pMatrix[i] == NULL) {
+            printf("Spazio in memoria insufficiente\n");
+            return 1;
+        }   
     }
 
     // Scrivo e stampo la matrice
@@ -34,6 +39,11 @@ int main() {
         printf("\n");
     }
     
+    // Libero la memoria allocata per ogni riga
+    for (int i = 0; i < row; i++) {
+        free(pMatrix[i]);
+    }
+    // Libero la memoria allocata per il vettore delle righe
     free(pMatrix);
     return 0;
 }

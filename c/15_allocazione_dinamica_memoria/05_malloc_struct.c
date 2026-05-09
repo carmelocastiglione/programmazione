@@ -1,33 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-typedef struct s_alunno {
-    char cognome[80];
-    char nome[80];
+#define DIM 80
+
+typedef struct alunno {
+    char cognome[DIM];
+    char nome[DIM];
     int classe;
     char sezione;
-} alunno;
+} alunno_t;
 
-void leggi(alunno * pAlunno);
+void leggi(alunno_t * pAlunno);
 
 int main() {
+    char buffer[DIM];
     // Allocazione di una struttura
-    alunno * pStruct;
-    pStruct = (alunno *) malloc(sizeof(alunno));
+    alunno_t * pStruct;
+    pStruct = (alunno_t *) malloc(sizeof(alunno_t));
     if (pStruct == NULL) {
         printf("Spazio in memoria insufficiente\n");
         return 1;
     }
     // Primo metodo (complicato)
     printf("Nome: ");
-    scanf("%s", (*pStruct).nome);
+    fgets((*pStruct).nome, DIM, stdin);
+    (*pStruct).nome[strlen((*pStruct).nome) - 1] = '\0';
     printf("Cognome: ");
-    scanf("%s", (*pStruct).cognome);
+    fgets((*pStruct).cognome, DIM, stdin);
+    (*pStruct).cognome[strlen((*pStruct).cognome) - 1] = '\0';
     printf("Classe: ");
-    scanf("%d", &(*pStruct).classe);
-    while (getchar() != '\n');
+    fgets(buffer, DIM, stdin);
+    // Converto la stringa letta in un intero
+    (*pStruct).classe = atoi(buffer);
     printf("Sezione: ");
-    scanf("%c", &(*pStruct).sezione);
+    fgets(buffer, DIM, stdin);
+    (*pStruct).sezione = buffer[0];
     printf("%s %s %d%c\n", 
         (*pStruct).nome,
         (*pStruct).cognome,
@@ -36,14 +44,18 @@ int main() {
     );
     // Secondo metodo: (*pStruct).campo equivale a pStruct->campo
     printf("Nome: ");
-    scanf("%s", pStruct->nome);
+    fgets(pStruct->nome, DIM, stdin);
+    pStruct->nome[strlen(pStruct->nome) - 1] = '\0';
     printf("Cognome: ");
-    scanf("%s", pStruct->cognome);
+    fgets(pStruct->cognome, DIM, stdin);
+    pStruct->cognome[strlen(pStruct->cognome) - 1] = '\0';
     printf("Classe: ");
-    scanf("%d", &pStruct->classe);
-    while (getchar() != '\n');
+    fgets(buffer, DIM, stdin);
+    // Converto la stringa letta in un intero
+    pStruct->classe = atoi(buffer);
     printf("Sezione: ");
-    scanf("%c", &pStruct->sezione);
+    fgets(buffer, DIM, stdin);
+    pStruct->sezione = buffer[0];
     printf("%s %s %d%c\n", 
         pStruct->nome,
         pStruct->cognome,
@@ -62,14 +74,19 @@ int main() {
     return 0;
 }
 
-void leggi(alunno * pAlunno) {
+void leggi(alunno_t * pAlunno) {
+    char buffer[DIM];
     printf("Nome: ");
-    scanf("%s", pAlunno->nome);
+    fgets(pAlunno->nome, DIM, stdin);
+    pAlunno->nome[strlen(pAlunno->nome) - 1] = '\0';
     printf("Cognome: ");
-    scanf("%s", pAlunno->cognome);
+    fgets(pAlunno->cognome, DIM, stdin);
+    pAlunno->cognome[strlen(pAlunno->cognome) - 1] = '\0';
     printf("Classe: ");
-    scanf("%d", &pAlunno->classe);
-    while (getchar() != '\n');
+    fgets(buffer, DIM, stdin);
+    // Converto la stringa letta in un intero
+    pAlunno->classe = atoi(buffer);
     printf("Sezione: ");
-    scanf("%c", &pAlunno->sezione);
+    fgets(buffer, DIM, stdin);
+    pAlunno->sezione = buffer[0];
 }
