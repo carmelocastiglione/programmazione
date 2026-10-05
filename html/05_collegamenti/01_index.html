@@ -12,17 +12,27 @@
     </p>
     <p>
         Usa target="_blank" per aprire il documento collegato in una nuova finestra del browser o scheda: 
+        <!-- target="_blank" apre il collegamento in una nuova scheda o finestra. -->
         <a href="https://www.google.it/" target="_blank">Visita Google.it in una nuova scheda</a>
     </p>
+    <!-- Gli URL assoluti contengono l'indirizzo completo del sito e non dipendono dalla cartella di questa pagina. -->
     <h2>URL Assoluti</h2>
     <p><a href="https://www.codegrind.it/">Codegrind</a></p>
     <p><a href="https://www.google.com/">Google</a></p>
 
+    <!--
+        Gli URL relativi vengono risolti partendo dalla cartella di questo file:
+        html/05_collegamenti/.
+    -->
     <h2>URL Relativi</h2>
+    <!-- Cerca il file nella stessa cartella di 01_index.html. -->
     <p><a href="codegrind-logo-icona.webp">Logo Codegrind</a></p>
+    <!-- Cerca il percorso esercizi/html a partire da html/05_collegamenti/. -->
     <p><a href="esercizi/html">Esercizi HTML</a></p>
+    <!-- .. risale a html/; da lì entra nella cartella sorella 01_introduzione/. -->
     <p><a href="../01_introduzione/01_index.html">Introduzione</a></p>
 
+    <!-- mailto: apre il programma di posta predefinito con il destinatario indicato. -->
     <p>
         Link a indirizzo email: 
         <a href="mailto:mariorossi.prova@example.com">Invia email</a>
@@ -33,8 +43,10 @@
         </a>
     </p>
     <h2>Creare un segnalibro</h2>
+    <!-- L'id identifica il punto della pagina a cui può saltare il link con #Capitolo4. -->
     <h3 id="Capitolo4">Capitolo 4</h3>
     <a href="#Capitolo4">Vai al Capitolo 4</a>
+    <!-- Combina un URL relativo (pagina.html) con il frammento della pagina di destinazione. -->
     <a href="pagina.html#Capitolo4">Vai al Capitolo 4 (su un'altra pagina)</a>
 </body>
 </html>
