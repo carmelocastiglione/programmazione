@@ -16,4 +16,6 @@ public class Libro {
     private String titolo;
     private String autore;
     private int annoPubblicazione;
+    // in questo esempio, un libro può appartenere a più generi (vettore di oggetti)
+    private Genere[] generi;
 }
