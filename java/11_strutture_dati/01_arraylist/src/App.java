@@ -46,6 +46,10 @@ public class App {
         }
         System.out.println("----");
 
+        // Ottengo il secondo elemento della lista (l'indice, come negli array, parte da 0)
+        // alunni.get(1) è simile ad alunni[1] negli array tradizionali
+        System.out.println(alunni.get(1));
+
         // Numero di elementi nella lista
         System.out.println("Numero di elementi nella lista: " + alunni.size());
 
@@ -54,9 +58,6 @@ public class App {
             System.out.println(alunni.get(i));
         }
         System.out.println("----");
-
-        // Ottengo il secondo elemento della lista (l'indice, come negli array, parte da 0)
-        System.out.println(alunni.get(1));
 
         // Sostituisco il terzo elemento della lista (attenzione, può generare IndexOutOfBoundsException se l'indice non esiste)
         alunni.set(2, new Alunno("Yoshi"));
