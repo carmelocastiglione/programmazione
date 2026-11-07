@@ -31,5 +31,8 @@ public class App {
         for (String persona : personeInCoda) {
             System.out.println(persona);
         }
+
+        // Visualizzazione del prossimo elemento senza rimuoverlo dalla coda (peek = restituisce il primo elemento senza rimuoverlo)
+        System.out.println("Prossima persona in coda: " + personeInCoda.peek());
     }
 }
