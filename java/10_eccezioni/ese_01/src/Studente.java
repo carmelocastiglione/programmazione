@@ -29,7 +29,7 @@ public class Studente extends Persona implements Partecipante {
     }
 
     @Override
-    public void iscrivi(Corso c) throws StudenteGiaIscrittoException, CapacitaCorsoEsceduriException {
+    public void iscrivi(Corso c) throws StudenteGiaIscrittoException, CapacitaCorsoEsauritaException {
         throw new UnsupportedOperationException("Da completare");
     }
 

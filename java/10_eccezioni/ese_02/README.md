@@ -63,13 +63,13 @@ capacità dell'array; all'inizio vale zero.
 
 - Memorizza nome, budget e fino a 100 dipendenti. `aggiungiDipendente` rifiuta
   matricole duplicate con `MatricolaGiaEsisteException` e, se pieno, lancia
-  `CapacitaDipartimentoEsceduriException`.
+  `CapacitaDipartimentoEsauritaException`.
 - `cercaDipendente` e `removiDipendente` cercano per matricola e lanciano
-  `DipendentNonTrovatoException` se non trovano il dipendente.
+  `DipendenteNonTrovatoException` se non trovano il dipendente.
   `getDipendenti` restituisce una copia con i soli elementi presenti.
 - `stipendioMediaDipartimento`, `costiDipartimento` e
   `getDipendentePiuPagato` usano gli stipendi calcolati e lanciano
-  `DipendentNonTrovatoException` se il dipartimento è vuoto.
+  `DipendenteNonTrovatoException` se il dipartimento è vuoto.
 - `operaiDipartimento`, `impiegatiDipartimento` e `dirigentiDipartimento`
   contano i dipendenti per tipo. `toString()` descrive il dipartimento e include
   il conteggio nel formato `Dipendenti totali: 1`.
@@ -90,7 +90,7 @@ se manca, scaricalo da
 e mettilo in `lib/`. Il JAR e i file compilati sono esclusi da Git.
 
 In VS Code, con **Extension Pack for Java**, apri la vista **Testing** e avvia
-`OperaioTest`, `ImpiegatoTest`, `DirigentTest` e `DipartimentoTest`. Un test
+`OperaioTest`, `ImpiegatoTest`, `DirigenteTest` e `DipartimentoTest`. Un test
 rosso indica un errore: aprilo per leggere il dettaglio. Assicurati che solo
 `src/` sia configurata come cartella sorgente, non `soluzione/`.
 

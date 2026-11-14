@@ -71,11 +71,11 @@ public class Corso {
     /**
      * Iscrive uno studente al corso.
      * @param s Studente da iscrivere
-     * @throws CapacitaCorsoEsceduriException se il corso è pieno
+     * @throws CapacitaCorsoEsauritaException se il corso è pieno
      */
-    public void iscrittiStudente(Studente s) throws CapacitaCorsoEsceduriException {
+    public void iscrittiStudente(Studente s) throws CapacitaCorsoEsauritaException {
         if (numStudenti >= MAX_STUDENTI) {
-            throw new CapacitaCorsoEsceduriException("Corso " + codice + " è pieno");
+            throw new CapacitaCorsoEsauritaException("Corso " + codice + " è pieno");
         }
         studenti[numStudenti++] = s;
     }

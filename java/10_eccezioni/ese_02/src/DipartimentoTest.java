@@ -67,7 +67,7 @@ public class DipartimentoTest {
     @DisplayName("Test cerca dipendente non trovato")
     public void testCercaDipendenteNonTrovato() {
         Dipartimento dip = new Dipartimento("Informatica", 50000.0);
-        assertThrows(DipendentNonTrovatoException.class, () -> {
+        assertThrows(DipendenteNonTrovatoException.class, () -> {
             dip.cercaDipendente("OP999");
         });
     }
@@ -87,7 +87,7 @@ public class DipartimentoTest {
     @DisplayName("Test rimozione dipendente non trovato")
     public void testRimozioneDipendenteNonTrovato() {
         Dipartimento dip = new Dipartimento("Informatica", 50000.0);
-        assertThrows(DipendentNonTrovatoException.class, () -> {
+        assertThrows(DipendenteNonTrovatoException.class, () -> {
             dip.removiDipendente("OP999");
         });
     }
@@ -186,7 +186,7 @@ public class DipartimentoTest {
     @DisplayName("Test media dipartimento vuoto")
     public void testMediaDipartimentoVuoto() {
         Dipartimento dip = new Dipartimento("Informatica", 50000.0);
-        assertThrows(DipendentNonTrovatoException.class, () -> {
+        assertThrows(DipendenteNonTrovatoException.class, () -> {
             dip.stipendioMediaDipartimento();
         });
     }

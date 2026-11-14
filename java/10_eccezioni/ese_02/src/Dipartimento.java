@@ -28,11 +28,11 @@ public class Dipartimento {
     /**
      * Aggiunge un dipendente al dipartimento.
      * @param d Dipendente da aggiungere
-     * @throws CapacitaDipartimentoEsceduriException se il dipartimento è pieno
+     * @throws CapacitaDipartimentoEsauritaException se il dipartimento è pieno
      * @throws MatricolaGiaEsisteException se la matricola esiste già
      */
     public void aggiungiDipendente(Dipendente d) 
-            throws CapacitaDipartimentoEsceduriException, MatricolaGiaEsisteException {
+            throws CapacitaDipartimentoEsauritaException, MatricolaGiaEsisteException {
         throw new UnsupportedOperationException("Da completare");
     }
 
@@ -40,18 +40,18 @@ public class Dipartimento {
      * Cerca un dipendente per matricola.
      * @param matricola Matricola del dipendente
      * @return Il dipendente se trovato
-     * @throws DipendentNonTrovatoException se non trovato
+     * @throws DipendenteNonTrovatoException se non trovato
      */
-    public Dipendente cercaDipendente(String matricola) throws DipendentNonTrovatoException {
+    public Dipendente cercaDipendente(String matricola) throws DipendenteNonTrovatoException {
         throw new UnsupportedOperationException("Da completare");
     }
 
     /**
      * Rimuove un dipendente dal dipartimento.
      * @param matricola Matricola del dipendente da rimuovere
-     * @throws DipendentNonTrovatoException se non trovato
+     * @throws DipendenteNonTrovatoException se non trovato
      */
-    public void removiDipendente(String matricola) throws DipendentNonTrovatoException {
+    public void removiDipendente(String matricola) throws DipendenteNonTrovatoException {
         throw new UnsupportedOperationException("Da completare");
     }
 
@@ -66,18 +66,18 @@ public class Dipartimento {
     /**
      * Calcola lo stipendio medio del dipartimento.
      * @return Media degli stipendi
-     * @throws DipendentNonTrovatoException se nessun dipendente
+     * @throws DipendenteNonTrovatoException se nessun dipendente
      */
-    public double stipendioMediaDipartimento() throws DipendentNonTrovatoException {
+    public double stipendioMediaDipartimento() throws DipendenteNonTrovatoException {
         throw new UnsupportedOperationException("Da completare");
     }
 
     /**
      * Calcola il costo totale del dipartimento.
      * @return Somma di tutti gli stipendi
-     * @throws DipendentNonTrovatoException se nessun dipendente
+     * @throws DipendenteNonTrovatoException se nessun dipendente
      */
-    public double costiDipartimento() throws DipendentNonTrovatoException {
+    public double costiDipartimento() throws DipendenteNonTrovatoException {
         throw new UnsupportedOperationException("Da completare");
     }
 
@@ -108,9 +108,9 @@ public class Dipartimento {
     /**
      * Trova il dipendente con lo stipendio più alto.
      * @return Il dipendente più pagato
-     * @throws DipendentNonTrovatoException se nessun dipendente
+     * @throws DipendenteNonTrovatoException se nessun dipendente
      */
-    public Dipendente getDipendentePiuPagato() throws DipendentNonTrovatoException {
+    public Dipendente getDipendentePiuPagato() throws DipendenteNonTrovatoException {
         throw new UnsupportedOperationException("Da completare");
     }
 

@@ -40,7 +40,7 @@ public class Studente extends Persona implements Partecipante {
     }
 
     @Override
-    public void iscrivi(Corso c) throws StudenteGiaIscrittoException, CapacitaCorsoEsceduriException {
+    public void iscrivi(Corso c) throws StudenteGiaIscrittoException, CapacitaCorsoEsauritaException {
         // Controlla se già iscritto
         for (int i = 0; i < numCorsi; i++) {
             if (corsiIscritti[i].getCodice().equals(c.getCodice())) {

@@ -54,7 +54,7 @@ public class CorsoTest {
         }
         
         Studente sUltimo = new Studente("Extra", "Cognome", "extra@example.com", "EXTRA");
-        assertThrows(CapacitaCorsoEsceduriException.class, () -> {
+        assertThrows(CapacitaCorsoEsauritaException.class, () -> {
             sUltimo.iscrivi(c);
         });
     }

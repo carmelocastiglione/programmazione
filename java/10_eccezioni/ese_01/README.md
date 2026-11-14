@@ -51,7 +51,7 @@ capacità degli array; all'inizio valgono zero.
 - `iscrivi` impedisce iscrizioni duplicate per codice del corso con
   `StudenteGiaIscrittoException`, usa la stessa eccezione al limite di 10 corsi e registra
   lo studente anche nel corso. Se il corso è pieno propaga
-  `CapacitaCorsoEsceduriException` senza aggiungere il corso allo studente.
+  `CapacitaCorsoEsauritaException` senza aggiungere il corso allo studente.
 - I getter degli array restituiscono copie contenenti solo gli elementi presenti,
   non l'intero array con le posizioni vuote.
 
@@ -60,7 +60,7 @@ capacità degli array; all'inizio valgono zero.
 - `Corso`: conserva codice, nome, docente, descrizione e fino a 30 studenti.
   Alla creazione aggiunge il corso ai corsi tenuti dal docente.
   `getCapacita()` restituisce 30; `iscrittiStudente` aggiunge uno studente o
-  lancia `CapacitaCorsoEsceduriException` se pieno. `cercaStudente` e
+  lancia `CapacitaCorsoEsauritaException` se pieno. `cercaStudente` e
   `rimuoviStudente` cercano per matricola e lanciano
   `CorsoNonTrovatoException` se non trovano lo studente.
 - `GestorePiattaforma`: gestisce al massimo 100 corsi, 1000 studenti e

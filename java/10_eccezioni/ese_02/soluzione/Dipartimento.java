@@ -36,11 +36,11 @@ public class Dipartimento {
     /**
      * Aggiunge un dipendente al dipartimento.
      * @param d Dipendente da aggiungere
-     * @throws CapacitaDipartimentoEsceduriException se il dipartimento è pieno
+     * @throws CapacitaDipartimentoEsauritaException se il dipartimento è pieno
      * @throws MatricolaGiaEsisteException se la matricola esiste già
      */
     public void aggiungiDipendente(Dipendente d) 
-            throws CapacitaDipartimentoEsceduriException, MatricolaGiaEsisteException {
+            throws CapacitaDipartimentoEsauritaException, MatricolaGiaEsisteException {
         // Controlla se la matricola esiste già
         for (int i = 0; i < numDipendenti; i++) {
             if (dipendenti[i].getMatricola().equals(d.getMatricola())) {
@@ -49,7 +49,7 @@ public class Dipartimento {
         }
         // Controlla capacità
         if (numDipendenti >= MAX_DIPENDENTI) {
-            throw new CapacitaDipartimentoEsceduriException("Dipartimento " + nome + " è pieno");
+            throw new CapacitaDipartimentoEsauritaException("Dipartimento " + nome + " è pieno");
         }
         dipendenti[numDipendenti++] = d;
     }
@@ -58,23 +58,23 @@ public class Dipartimento {
      * Cerca un dipendente per matricola.
      * @param matricola Matricola del dipendente
      * @return Il dipendente se trovato
-     * @throws DipendentNonTrovatoException se non trovato
+     * @throws DipendenteNonTrovatoException se non trovato
      */
-    public Dipendente cercaDipendente(String matricola) throws DipendentNonTrovatoException {
+    public Dipendente cercaDipendente(String matricola) throws DipendenteNonTrovatoException {
         for (int i = 0; i < numDipendenti; i++) {
             if (dipendenti[i].getMatricola().equals(matricola)) {
                 return dipendenti[i];
             }
         }
-        throw new DipendentNonTrovatoException("Dipendente con matricola " + matricola + " non trovato");
+        throw new DipendenteNonTrovatoException("Dipendente con matricola " + matricola + " non trovato");
     }
 
     /**
      * Rimuove un dipendente dal dipartimento.
      * @param matricola Matricola del dipendente da rimuovere
-     * @throws DipendentNonTrovatoException se non trovato
+     * @throws DipendenteNonTrovatoException se non trovato
      */
-    public void removiDipendente(String matricola) throws DipendentNonTrovatoException {
+    public void removiDipendente(String matricola) throws DipendenteNonTrovatoException {
         for (int i = 0; i < numDipendenti; i++) {
             if (dipendenti[i].getMatricola().equals(matricola)) {
                 dipendenti[i] = dipendenti[numDipendenti - 1];
@@ -83,7 +83,7 @@ public class Dipartimento {
                 return;
             }
         }
-        throw new DipendentNonTrovatoException("Dipendente con matricola " + matricola + " non trovato");
+        throw new DipendenteNonTrovatoException("Dipendente con matricola " + matricola + " non trovato");
     }
 
     public Dipendente[] getDipendenti() {
@@ -99,11 +99,11 @@ public class Dipartimento {
     /**
      * Calcola lo stipendio medio del dipartimento.
      * @return Media degli stipendi
-     * @throws DipendentNonTrovatoException se nessun dipendente
+     * @throws DipendenteNonTrovatoException se nessun dipendente
      */
-    public double stipendioMediaDipartimento() throws DipendentNonTrovatoException {
+    public double stipendioMediaDipartimento() throws DipendenteNonTrovatoException {
         if (numDipendenti == 0) {
-            throw new DipendentNonTrovatoException("Nessun dipendente nel dipartimento");
+            throw new DipendenteNonTrovatoException("Nessun dipendente nel dipartimento");
         }
         double somma = 0;
         for (int i = 0; i < numDipendenti; i++) {
@@ -117,11 +117,11 @@ public class Dipartimento {
     /**
      * Calcola il costo totale del dipartimento.
      * @return Somma di tutti gli stipendi
-     * @throws DipendentNonTrovatoException se nessun dipendente
+     * @throws DipendenteNonTrovatoException se nessun dipendente
      */
-    public double costiDipartimento() throws DipendentNonTrovatoException {
+    public double costiDipartimento() throws DipendenteNonTrovatoException {
         if (numDipendenti == 0) {
-            throw new DipendentNonTrovatoException("Nessun dipendente nel dipartimento");
+            throw new DipendenteNonTrovatoException("Nessun dipendente nel dipartimento");
         }
         double somma = 0;
         for (int i = 0; i < numDipendenti; i++) {
@@ -177,11 +177,11 @@ public class Dipartimento {
     /**
      * Trova il dipendente con lo stipendio più alto.
      * @return Il dipendente più pagato
-     * @throws DipendentNonTrovatoException se nessun dipendente
+     * @throws DipendenteNonTrovatoException se nessun dipendente
      */
-    public Dipendente getDipendentePiuPagato() throws DipendentNonTrovatoException {
+    public Dipendente getDipendentePiuPagato() throws DipendenteNonTrovatoException {
         if (numDipendenti == 0) {
-            throw new DipendentNonTrovatoException("Nessun dipendente nel dipartimento");
+            throw new DipendenteNonTrovatoException("Nessun dipendente nel dipartimento");
         }
         Dipendente max = dipendenti[0];
         double stipendioMax = 0;

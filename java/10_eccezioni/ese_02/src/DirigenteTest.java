@@ -3,7 +3,7 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Test Dirigente")
-public class DirigentTest {
+public class DirigenteTest {
 
     @Test
     @DisplayName("Test costruttore dirigente valido")

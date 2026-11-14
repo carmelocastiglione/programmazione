@@ -7,9 +7,9 @@ public interface Partecipante {
      * Iscrive il partecipante a un corso.
      * @param c Corso a cui iscriversi
      * @throws StudenteGiaIscrittoException se lo studente è già iscritto
-     * @throws CapacitaCorsoEsceduriException se il corso è pieno
+     * @throws CapacitaCorsoEsauritaException se il corso è pieno
      */
-    void iscrivi(Corso c) throws StudenteGiaIscrittoException, CapacitaCorsoEsceduriException;
+    void iscrivi(Corso c) throws StudenteGiaIscrittoException, CapacitaCorsoEsauritaException;
 
     /**
      * Aggiunge un voto al partecipante.
